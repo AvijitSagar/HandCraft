@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Order</title>
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ============================NAVBAR START======================== -->
+  <div id="navbar" class="header">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+              <div class="logo">
+                  <a href="index.html"><img class="img-responsive" src="img/logo.png" alt=""></a>
+              </div>
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="category.html">Hand Craft</a></li>
+                    <li><a class="dropdown-item" href="category.html">Art Gallery</a></li>
+                    <!-- <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                  </ul>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                  </li>
+              </ul>
+              <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+              </div>
+          </div>
+      </nav>
+  </div>
+  <!-- =================================NAVBAR END========================= -->
+
+
+
+
+
+  <!-- =====================================order start========================= -->
+  <div class="container">
+    <div class="form">
+      <div class="text-center">
+        <div class="row">
+          <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+            <div class="card mb-3">
+              <img src="img/carft_3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-5 col-md-6">
+              <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-12">
+                    <label for="validationCustom01" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="validationCustom02" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="validationCustomUsername" class="form-label">Username</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Please choose a username.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <label for="validationCustom03" class="form-label">City</label>
+                    <input type="text" class="form-control" id="validationCustom03" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="validationCustom04" class="form-label">State</label>
+                    <select class="form-select" id="validationCustom04" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>dhaka</option>
+                      <option>khulna</option>
+                      <option>barishal</option>
+                      <option>sylhet</option>
+                      <option>chittagong</option>
+                      <option>rajshahi</option>
+                      <option>rangpur</option>
+                      <option>comilla</option>
+
+                      
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid state.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="validationCustom05" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="validationCustom05" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid zip.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Confirm Order</button>
+                  </div>
+              </form>
+            </div>
+      </div>
+  </div>
+  </div>
+  </div>
+  <!-- =====================================order end========================= -->
+
+
+
+
+
+    <!-- ================================social start============================= -->
+    <div class="container">
+        <div class="social">
+            <ul>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/color/48/null/facebook-new.png"/></a>
+                    
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/color/48/null/instagram-new--v1.png"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/color/48/null/twitter-circled--v1.png"/></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ================================social end============================= -->
+
+
+
+
+
+    <!-- ================================footer end============================= -->
+    <div class="container">
+        <div class="footer">
+            <span>@all right reserved by <a href="https://saggarr.com/">Avijit Biswas (sagar)</a>  2023</span>
+        </div>
+    </div>
+    <!-- ================================footer end============================= -->
+
+
+
+
+
+    <!-- bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- javascript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
