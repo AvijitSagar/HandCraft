@@ -24,7 +24,75 @@ a{
     float: none;
     clear: both;
 }
+
+.tbl-full{
+    width: 100%;
+}
+
+.tbl-30{
+    width: 30%;
+}
+
+table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+}
+
+table tr td{
+    padding: 1%;
+}
+
+.form-center{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.yes-message{
+    color: #32ff7e;
+}
+
+.no-message{
+    color: #ff4d4d;
+}
 /* --------------------- */
+
+/* ---------------buttons---------- */
+.btn-primary{
+    background-color: #0984e3;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+}
+.btn-primary:hover{
+    background-color: #74b9ff;
+}
+
+
+.btn-secondary{
+    background-color: #00b894;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+}
+.btn-secondary:hover{
+    background-color: #55efc4;
+}
+
+
+.btn-danger{
+    background-color: #d63031;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+}
+.btn-danger:hover{
+    background-color: #ff7675;
+}
+/* ---------------------------- */
+
 
 
 /* -------------menu----------- */
@@ -61,6 +129,7 @@ a{
 .main-content{
     padding: 3% 0;
     background-color: #dfe6e9;
+    align-items: center;
 }
 
 .col-4{
