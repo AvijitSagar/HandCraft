@@ -1,3 +1,6 @@
+<!-- database connection credentials from config/constants.php -->
+<?php include("../config/constants.php"); ?>
+
 <!-- ===========================MENU SECTION START=========================== -->
 <div class="menu">
         <div class="wrapper">
