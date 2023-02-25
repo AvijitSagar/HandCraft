@@ -6,8 +6,8 @@
     <title>Admin Order</title>
 </head>
 <body>
-    <!-- --------include menu------- -->
-    <?php include("partials/menu.php"); ?>
+    <!-- ------------menu include--------- -->
+    <?php include("partials/menu.php") ?>
 
     <div class="main-content">
         <div class="wrapper">

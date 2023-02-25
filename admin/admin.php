@@ -15,8 +15,9 @@
     <div class="main-content">
         <div class="wrapper">
             <h1>Admin</h1>
-            <br><br>
+            <br><br><br>
 
+            <a href="add_admin.php" class="btn-primary">Add Admin</a>
             <!-- admin added successfully message show -->
             <span class="form-center">
                 <?php
@@ -24,15 +25,38 @@
                         echo $_SESSION['add'];
                         unset($_SESSION['add']); //it will remove th emessagae after sometime
                     }
+
+                    if(isset($_SESSION['delete'])){
+                        echo $_SESSION['delete'];
+                        unset($_SESSION['delete']);
+                    }
+                    
+                    if(isset($_SESSION['update'])){
+                        echo $_SESSION['update'];
+                        unset($_SESSION['update']);
+                    }
+
+                    if(isset($_SESSION['user_not_found'])){
+                        echo $_SESSION['user_not_found'];
+                        unset($_SESSION['user_not_found']);
+                    }
+                    
+                    if(isset($_SESSION['password_not_match'])){
+                        echo $_SESSION['password_not_match'];
+                        unset($_SESSION['password_not_match']);
+                    }
+
+                    if(isset($_SESSION['password_changed'])){
+                        echo $_SESSION['password_changed'];
+                        unset($_SESSION['password_changed']);
+                    }
                 ?>
             </span>
-            <br><br>
-            
             
 
 
             <!-- button to add admin -->
-            <a href="add_admin.php" class="btn-primary">Add Admin</a>
+            <!-- <a href="add_admin.php" class="btn-primary">Add Admin</a> -->
             <br><br><br>
             <table class="tbl-full">
                 <tr>
@@ -52,7 +76,7 @@
                     if($res == true){
                         //count rows to check whether we have data in database or not
                         $count = mysqli_num_rows($res);
-                        $sn = 1; //create a variable to assign thevaalue.. etar sahajje amra DB te id er serial break ba delete holeo user ke serially sl_no dekhano jay
+                        $sn = 1; //create a variable to assign the vaalue.. etar sahajje amra DB te id er serial break ba delete holeo user ke serially sl_no dekhano jay
                                 //ebar amader table a id er jaygay $sn++ dilei hobe
                         //check the number of rows
                         if($count > 0){
@@ -75,8 +99,9 @@
                                     <td><?php echo $fullname; ?></td>
                                     <td><?php echo $username; ?></td>
                                     <td>
-                                        <a href="#" class="btn-secondary">Update</a>
-                                        <a href="#" class="btn-danger">Delete</a>
+                                        <a href="<?php echo HOME_URL; ?>admin/update_admin_password.php?id=<?php echo $id; ?>" class="btn-primary">Change Password</a>
+                                        <a href="<?php echo HOME_URL; ?>admin/update_admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update Admin</a>
+                                        <a href="<?php echo HOME_URL; ?>admin/delete_admin.php?id=<?php echo $id; ?>" class="btn-danger">Delete Admin</a>
                                     </td>
                                 </tr>
                                 

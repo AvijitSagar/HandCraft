@@ -1,5 +1,5 @@
 <?php
-    //startinf session
+    //starting session
     session_start();
 
 

@@ -5,6 +5,8 @@
     <title>Add Admin</title>
 </head>
 <body>
+
+    <!-- ------------menu include--------- -->
     <?php include("partials/menu.php") ?>
 
     <div class="main-content ">
@@ -41,6 +43,8 @@
                     </tr>
                     <tr>
                         <td colspan="2">
+                            <!-- <input type="button" name="cancel" value="Cancel" class="btn-primary"> -->
+                            <a href="<?php echo HOME_URL; ?>admin/admin.php"><input class="btn-primary" type="button" value="cancel"></a>
                             <input type="submit" name="submit" value="Add Admin" class="btn-secondary">
                         </td>
                     </tr>
@@ -89,7 +93,7 @@
                 // 5. we will display the "new admin created successfully" by session
                 // 6. session also created in constants.php file and will be included in the menu.php file as we did before for database connection
                 // 7. creating a session variable to display message
-                $_SESSION['add'] = "Admin addedd successfully";
+                $_SESSION['add'] = "<div class='success'>Admin addedd successfully </div>";
                 // 8. redirect page to manage admin
                 header("location:". HOME_URL ."admin/admin.php"); //HOME_URL is the constant and we concatenate the last part of the page url
                                 // 'http://localhost/php/HandCraft/' <-- this is HOME_URL and 'admin/admin.php' <-- this is the concatenated part
@@ -98,7 +102,7 @@
             }
             else{
                 // echo "Admin not created";
-                $_SESSION['add'] = "Failed to add admin";
+                $_SESSION['add'] = "<div class='error'>Failed to add admin </div>";
                 // 9. redirect page to manage admin
                 header("location:". HOME_URL ."admin/add_admin.php"); //HOME_URL is the constant and we concatenate the last part of the page url
                                 // 'http://localhost/php/HandCraft/' <-- this is HOME_URL and 'admin/add_admin.php' <-- this is the concatenated part
