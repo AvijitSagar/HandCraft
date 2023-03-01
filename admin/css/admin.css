@@ -13,6 +13,33 @@
     overflow: scroll;
 }
 
+.main-container{
+    /* border: 5px solid rgb(17, 223, 34); */
+    /* padding: 50% 50%; */
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 50px; */
+}
+
+.container{
+    /* border: 2px solid gray; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 7%;
+    /* margin-right: 5%; */
+}
+
+
+.form-fieldset{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 30% 70%;
+}
+
 a{
     text-decoration: none;
 }

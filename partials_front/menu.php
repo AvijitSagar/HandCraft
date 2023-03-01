@@ -1,3 +1,5 @@
+<?php include('config/constants.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +18,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <div class="logo">
-                <a href="index.html"><img class="img-responsive" src="img/logo.png" alt=""></a>
+                <a href="<?php echo HOME_URL; ?>"><img class="img-responsive" src="img/logo.png" alt=""></a>
               </div>
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,28 +27,58 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                      <a class="nav-link active" aria-current="page" href="<?php echo HOME_URL; ?>">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                      <a class="nav-link" href="#">Link</a>
                     </li>
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Category
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="category.html">Hand Craft</a></li>
-                      <li><a class="dropdown-item" href="category.html">Art Gallery</a></li>
-                      <!-- <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li> -->
-                  </ul>
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Category
+                      </a>
+                      <ul class="dropdown-menu">
+
+                        <?php
+                          //create sql to get all data from tbl_category
+                          $sql = "SELECT * FROM tbl_category";
+                          //execute
+                          $res = mysqli_query($conn, $sql);
+                          //count rows to check
+                          $count = mysqli_num_rows($res);
+                          //check
+                          if($count > 0){
+                            //category is available
+                            while($rows = mysqli_fetch_assoc($res)){
+                              //get the values like title
+                              $id = $rows['id'];
+                              $title = $rows['title'];
+
+                              ?>
+
+                                  <li>
+                                    <a class="dropdown-item" href="<?php echo HOME_URL; ?>category.php"><?php echo $title; ?></a>
+                                  </li>
+                                
+                              <?php
+                            }
+                          }
+                          else{
+                            //category unavailable
+                            echo "<div class='error'>category not found</div>";
+                          }
+                        ?>
+                        <!-- <li><hr class="dropdown-divider"></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </li> -->
+                      </ul>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                      <a class="nav-link disabled">Disabled</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex" role="search" action="<?php echo HOME_URL; ?>search.php" method="POST">
+                    <input class="form-control me-2" name="search" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
                 </div>

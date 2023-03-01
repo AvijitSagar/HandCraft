@@ -7,6 +7,10 @@
   width: 10%;
 }
 
+.text-violet{
+  color: violet;
+}
+
 .img-responsive {
   width: 100%;
 }
@@ -20,6 +24,13 @@ fieldset{
   margin: 5%;
   padding: 3%;
   border-radius: 5px;
+}
+.success{
+  color: blue;
+}
+
+.error{
+  color: red;
 }
 /* =============================== */
 

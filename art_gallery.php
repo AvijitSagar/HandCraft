@@ -12,7 +12,7 @@
 
     <!-- ================================cart start============================= -->
     <div id="cart" class="container">
-      <h1>Handcrafted Products</h1>
+      <h1>Art Gallery Products</h1>
       <div class="container text-center">
           <div class="row align-items-center">
             <div class="col">

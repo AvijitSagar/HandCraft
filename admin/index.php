@@ -7,51 +7,50 @@
     <?php include("partials/head.php") ?>
 </head>
 <body>
-    <div class="main-content ">
-        <div class="wrapper ">
-            <h1 class="form-center">Admin Login</h1>
-            <br><br>
 
-            <!-- display session message -->
-            <span class="form-center">
-                <?php
-                
-                    if(isset($_SESSION['login'])){
-                        echo $_SESSION['login'];
-                        unset($_SESSION['login']);
-                    }
-
-                    if(isset($_SESSION['no_login_message'])){
-                        echo $_SESSION['no_login_message'];
-                        unset($_SESSION['no_login_message']);
-                    }
-                ?>
-            </span>
+ <!-- display session message -->
+ <br><br><br><br>
+        <span class="form-center">
+            <?php
             
+                if(isset($_SESSION['login'])){
+                    echo $_SESSION['login'];
+                    unset($_SESSION['login']);
+                }
 
-            <br><br>
-            <form action="" method="POST" class="form-center">
-                <table class="tbl-30">
-                    <tr>
-                        <td>Username</td>
-                        <td><input type="text" name="username" placeholder="Username" id="" required></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td><input type="password" name="password" placeholder="Password" id="" required></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <br>
-                            <input type="submit" name="submit" value="Login" class="btn-secondary">
-                        </td>
-                    </tr>
-                </table>
-            </form>
+                if(isset($_SESSION['no_login_message'])){
+                    echo $_SESSION['no_login_message'];
+                    unset($_SESSION['no_login_message']);
+                }
+            ?>
+        </span>
+    <div class="main-container">
+        <div class="container">
+            <fieldset class="form-fieldset">
+                <Legend class="">LogIn</Legend>
+                    <form action="" method="POST" class="form-center">
+                        <table>
+                            <tr>
+                                <td>Username</td>
+                                <br>
+                                <td><input type="text" name="username" placeholder="Username" id="" required></td>
+                            </tr>
+                            <tr>
+                                <td>Password</td>
+                                <td><input type="password" name="password" placeholder="Password" id="" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <br>
+                                    <input type="submit" name="submit" value="Login" class="btn-primary">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+            </fieldset>
         </div>
     </div>
     <!-- -------------footer include--------- -->
-    <?php include("partials/footer.php"); ?>
 
 
 

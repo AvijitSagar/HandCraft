@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2023 at 10:39 PM
+-- Generation Time: Feb 26, 2023 at 07:35 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -83,8 +83,9 @@ CREATE TABLE `tbl_category` (
 --
 
 INSERT INTO `tbl_category` (`id`, `title`, `image_name`, `featured`, `active`) VALUES
-(44, 'a', 'item_category_940.jpeg', 'no', 'no'),
-(45, 'b', 'item_category_189.jpg', 'no', 'no');
+(56, 'food', 'item_category_560.png', 'yes', 'yes'),
+(57, 'art', 'item_category_870.jpeg', 'yes', 'yes'),
+(58, 'play', 'item_category_942.jpg', 'yes', 'yes');
 
 -- --------------------------------------------------------
 
@@ -102,6 +103,20 @@ CREATE TABLE `tbl_item` (
   `featured` varchar(10) NOT NULL,
   `active` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `tbl_item`
+--
+
+INSERT INTO `tbl_item` (`id`, `title`, `description`, `price`, `image_name`, `category_id`, `featured`, `active`) VALUES
+(62, 'bat', 'scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll ', '3000.00', 'item_name_93.jpeg', 58, 'yes', 'yes'),
+(64, 'weed', 'good for health', '10.00', 'item_name_866.png', 56, 'yes', 'yes'),
+(65, '', '', '10.00', 'item_name_656.jpeg', 56, 'yes', 'yes'),
+(66, '', '', '10.00', '', 56, 'yes', 'yes'),
+(67, '', '', '10.00', '', 56, 'yes', 'yes'),
+(68, '', '', '10.00', '', 56, 'yes', 'yes'),
+(69, '', '', '10.00', '', 56, 'yes', 'yes'),
+(70, '', '', '10.00', '', 56, 'yes', 'yes');
 
 -- --------------------------------------------------------
 
@@ -177,13 +192,13 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT for table `tbl_item`
 --
 ALTER TABLE `tbl_item`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT for table `tbl_order`
