@@ -3,97 +3,12 @@
 
 
 
-
 <?php include('partials_front/category_link.php'); ?>
 
 
 
 
-    <!-- ================================carousel start============================= -->
-    <div id="slideimg">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-
-
-
-            <?php
-              //sql
-              //je shob category featured ebong active ache sudhu shei category er image gulai show korar query
-              //chaile amra category er shob image gulai show korate pari abar limit diyeo show korate pari 
-
-              // $sql = "SELECT * FROM tbl_category";
-              // $sql = "SELECT * FROM tbl_category LIMIT 3";
-              $sql = "SELECT * FROM tbl_category WHERE featured = 'yes' AND active = 'yes'";
-
-              //execute
-              $res = mysqli_query($conn, $sql);
-              //count
-              $count = mysqli_num_rows($res);
-              //check
-              if($count > 0){
-                //category is available
-                //get data
-                while($rows = mysqli_fetch_assoc($res)){
-                  // ja ja lagbe tai tai nite hobe. ekhane sudhu item imge gula carusel a show korte hobe tai sudhu image_name e naoa hoyeche
-                  $image = $rows['image_name'];
-
-                  //php brake to use html
-                  ?>
-                    
-                    <div class="carousel-item active" data-bs-interval="5000">
-                      <?php
-                        //check if image is available or not
-                        if($image == ""){
-                          //no image
-                          echo "<div class=''error>Image not available</div>";
-                        }
-                        else{
-                          //image is available
-                          ?>
-                            <img src="<?php echo HOME_URL; ?>img/category/<?php echo $image; ?>" class="d-block w-100" alt="...">
-                          <?php
-                        }
-                      ?>
-                      
-                    </div>
-
-                  <?php
-                }
-
-              }
-              else{
-                //category is not available
-                echo "<div class='error'>Category is not added yet</div>";
-              }
-            ?>
-
-
-
-
-
-
-
-              <!-- <div class="carousel-item active" data-bs-interval="5000">
-                <img src="img/img_1.jpg" class="d-block w-100" alt="...">
-              </div> -->
-              <!-- <div class="carousel-item" data-bs-interval="5000">
-                <img src="img/img_2.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item" data-bs-interval="5000">
-                <img src="img/img_3.jpg" class="d-block w-100" alt="...">
-              </div> -->
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <!-- ================================carousel end============================= -->
+<?php include('carousel.php') ?>
 
 
 
@@ -137,7 +52,7 @@
                           <div class="card" style="width: 18rem;">
 
                             <?php
-                              if($image == ""){
+                              if($item_image == ""){
                                 //image not available
                                 echo "<div class='error'> Image not added</div>";
                               }
@@ -148,13 +63,10 @@
                                 <?php
                               }
                             ?>
-
-
-                            
                               <div class="card-body">
                                 <h5 class="card-title"><?php echo $item_title; ?></h5>
                                 <p class="card-text">price: <span><?php echo $item_price; ?></span> tk</p>
-                                <a href="<?php echo HOME_URL; ?>item_details.php" class="btn btn-primary">BUY</a>
+                                <a href="<?php echo HOME_URL; ?>item_details.php?id=<?php echo $item_id; ?>" class="btn btn-primary">BUY</a>
                               </div>
                           </div>
                       </div>

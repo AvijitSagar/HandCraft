@@ -21,7 +21,9 @@
                 ?>
 
                     <li>
-                      <a href="<?php echo HOME_URL; ?>category.php"><?php echo $title; ?></a>
+                      <!-- getting the id of the category to show the items of the relavant category -->
+                      <!-- mane front end theke je category select kora hobe shei category er joto item ache ta category.php page a dekhano hobe -->
+                      <a href="<?php echo HOME_URL; ?>category.php?id=<?php echo $id; ?>"><?php echo $title; ?></a>
                     </li>
                   
                 <?php
