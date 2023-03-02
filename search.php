@@ -57,7 +57,7 @@
                                         <h5 class="card-title"><?php echo $item_title; ?></h5>
                                         <p class="card-text">price: <span><?php echo $item_price; ?></span> tk</p>
                                         <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                                        <a href="item_details.html" class="btn btn-primary">BUY</a>
+                                        <a href="<?php echo HOME_URL; ?>item_details.php?id=<?php echo $item_id; ?>" class="btn btn-primary">BUY</a>
                                     </div>
                                 </div>
 

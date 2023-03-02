@@ -47,7 +47,10 @@
                                   else{
                                     //image abailable
                                     ?>
-                                      <img src="<?php echo HOME_URL; ?>img/item/<?php echo $item_image; ?>" class="card-img-top" alt="...">
+                                      <!-- this div is for simple mouse hover image zoom with no move effect -->
+                                      <div class="image-container">
+                                       <img src="<?php echo HOME_URL; ?>img/item/<?php echo $item_image; ?>" class="card-img-top zoom-image" alt="...">
+                                      </div>
                                     <?php
                                   }
                                 ?>
@@ -78,7 +81,7 @@
                                     <h5 class="card-title"><?php echo $item_title; ?></h5>
                                     <p class="card-text"><?php echo $item_description; ?></p>
                                     <p class="card-text">price: <span><?php echo $item_price; ?></span> tk</p>
-                                    <a href="<?php echo HOME_URL; ?>order.php" class="btn btn-primary">buy</a>
+                                    <a href="<?php echo HOME_URL; ?>order.php?id=<?php echo $item_id; ?>" class="btn btn-primary">buy</a>
                                   </div>
                                   <div class="card-footer text-muted">
                                     2 days ago
@@ -114,9 +117,5 @@
     
     
     <!-- =================================item details end===================== -->
-
-
-
-
 
     <?php include('partials_front/footer.php'); ?>

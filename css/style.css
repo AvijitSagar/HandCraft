@@ -211,6 +211,28 @@ fieldset{
 
 
 
+/* ==============zoom image=================== */
+/* =================<!-- this code is for simple mouse hover image zoom with no move effect -->================ */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.zoom-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform .5s ease;
+}
+
+.zoom-image:hover {
+  transform: scale(2.2);
+}
+/* ============================================ */
+
+
+
+
 /* ================MEDIA QUERIES============= */
 /* ================for mobile============ */
 @media(max-width: 768px) {
