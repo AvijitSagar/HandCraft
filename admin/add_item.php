@@ -143,9 +143,13 @@
                     // echo "button clicked";
                     //add items in database
                     // 1. get the data from form
+                    
+                    //prevent sql injection with mysqli_real_escape_string function
+                    $raw_title = $_POST['title'];
+                    $title = mysqli_real_escape_string($conn, $raw_title);
+                    $raw_description = $_POST['description'];
+                    $description = mysqli_real_escape_string($conn, $raw_description);
 
-                    $title = $_POST['title'];
-                    $description = $_POST['description'];
                     $price = $_POST['price'];
                     $category = $_POST['category'];
 

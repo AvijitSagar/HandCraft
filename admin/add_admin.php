@@ -66,9 +66,9 @@
             // echo("clicked");
 
             // 1. get the data form form
-            $full_name = $_POST["full_name"];
-            $username = $_POST["username"];
-            $password = md5($_POST["password"]);//md5 is for encryption of the data
+            $full_name = mysqli_real_escape_string($conn, $_POST["full_name"]);
+            $username = mysqli_real_escape_string($conn, $_POST["username"]);
+            $password = mysqli_real_escape_string($conn, md5($_POST["password"]));//md5 is for encryption of the data
             // echo $full_name, $username, $password;
 
 

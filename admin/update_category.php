@@ -136,7 +136,8 @@
                     // echo "clicked";
                     // 1. get all the values from form to update db
                     $id = $_POST['id'];
-                    $title = $_POST['title'];
+                    $raw_title = $_POST['title'];
+                    $title = mysqli_real_escape_string($conn, $raw_title);
                     $current_image = $_POST['current_image'];
                     $featured = $_POST['featured'];
                     $active = $_POST['active'];

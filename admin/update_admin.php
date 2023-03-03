@@ -85,9 +85,15 @@
         if(isset($_POST['submit'])){
             // echo "clicked";
             //get all the value from form to update
-            $id = $_POST['id'];
-            $full_name = $_POST['full_name'];
-            $username = $_POST['username'];
+            //preventing input from sqlinjectiion with mysqli_real_escape_string function
+            $raw_id = $_POST['id'];
+            $id = mysqli_real_escape_string($conn, $raw_id);
+
+            $raw_full_name = $_POST['full_name'];
+            $full_name = mysqli_real_escape_string($conn, $raw_full_name);
+
+            $raw_username = $_POST['username'];
+            $username = mysqli_real_escape_string($conn, $raw_username);
 
             //sql query to update admin
             $sql = "UPDATE tbl_admin SET fullname = '$full_name', username = '$username' WHERE id = $id";

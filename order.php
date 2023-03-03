@@ -143,10 +143,21 @@
                 $total = $item_price * $quantity; //total = price x quantity
                 $order_date = date("Y-m-d h:i:sa"); //order date
                 $status = 'ordered'; //ordered, ondelevary, delivered, canceled..... user sudhu order korte parbe baki gula admin handle korbe admin panel theke
-                $customer_name = $_POST['name'];
-                $customer_contact = $_POST['contact'];
-                $customer_email = $_POST['email'];
-                $customer_address = $_POST['address'];
+
+
+                //securing given form data lfrom sql injection with mysdqli_real_escape_string function
+                $raw_customer_name = $_POST['name'];
+                $customer_name = mysqli_real_escape_string($conn, $raw_customer_name);
+
+                $raw_customer_contact = $_POST['contact'];
+                $customer_contact = mysqli_real_escape_string($conn, $raw_customer_contact);
+
+                $raw_customer_email = $_POST['email'];
+                $customer_email = mysqli_real_escape_string($conn, $raw_customer_email);
+
+                $raw_customer_address = $_POST['address'];
+                $customer_address = mysqli_real_escape_string($conn, $raw_customer_address);
+
 
                 //save tehe order in db
                 //sql

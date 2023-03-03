@@ -4,7 +4,10 @@
 <div id="cart" class="container">
     <?php
         //get the search keyword
-        $search = $_POST['search'];
+        //mysqli_real_escape_string this is for sql injection preventing
+        //VVI
+        $raw_search = $_POST['search'];
+        $search = mysqli_real_escape_string($conn, $raw_search);
     ?>
     <h1>Products on your search ' <a href="#" class="text-violet"><?php echo $search; ?></a> '</h1>
     <div class="container text-center">
@@ -17,6 +20,7 @@
             //sql query to get products based on search keyword
             //theis query will seach items or products from the table 
             //query for search from table
+            //
             $sql = "SELECT * FROM tbl_item WHERE title LIKE '%$search%' OR description LIKE '%$search%'";
 
             //execute

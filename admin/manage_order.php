@@ -153,7 +153,10 @@
                     // $customer_name = $_POST['customer_name'];
                     // $customer_contact = $_POST['customer_contact'];
                     // $customer_email = $_POST['customer_email'];
-                    $customer_address = $_POST['customer_address'];
+
+                    //sql injection prevent
+                    $raw_customer_address = $_POST['customer_address'];
+                    $customer_address = mysqli_real_escape_string($conn, $raw_customer_address);
 
                     //update the values
                     $sql_2 = "UPDATE tbl_order SET

@@ -192,8 +192,13 @@
                 if(isset($_POST['submit'])){
                     // 1. get the form values to update the item
                     $id = $_POST['id'];
-                    $title = $_POST['title'];
-                    $description = $_POST['description'];
+
+                    //sql injection prevention
+                    $raw_title = $_POST['title'];
+                    $title = mysqli_real_escape_string($conn, $raw_title);
+                    $raw_description = $_POST['description'];
+                    $description = mysqli_real_escape_string($conn, $raw_description);
+
                     $price = $_POST['price'];
                     $current_image = $_POST['current_image'];
                     $category = $_POST['category'];

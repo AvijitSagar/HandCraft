@@ -62,8 +62,22 @@
             //button clicked
 
             // 1. get the data form form
-            $username = $_POST["username"];
-            $password = md5($_POST["password"]);//md5 is for encryption of the data
+            // $username = $_POST["username"];
+            //password = md5($_POST["password"]);//md5 is for encryption of the data
+            //mysqli_real_escape_string this is for preventing sql injection
+            //VVI
+            $raw_username = $_POST["username"];
+            $username = mysqli_real_escape_string($conn, $raw_username);
+            //password er khetre obosso mysqli_real_escape_string er dorkar nai karon password already md5 diye encripted. tobuo mysqli_real_escape_string function use kora holo
+            $raw_password = md5($_POST["password"]);
+            $password = mysqli_real_escape_string($conn, $raw_password);
+
+            // $username = mysqli_real_escape_string($conn, $_POST["username"]);
+            // $password = mysqli_real_escape_string($conn, md5($_POST["password"]));//md5 is for encryption of the data
+
+
+
+
 
             //selecting username and password from 'admin_login' table
             // $sql = "SELECT username, password FROM admin_login";

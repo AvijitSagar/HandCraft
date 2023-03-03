@@ -78,7 +78,8 @@
                 if(isset($_POST['submit'])){
                     // echo "button clicked";
                     // 1. storing form values in variables
-                    $title = $_POST['title'];
+                    $raw_title = $_POST['title'];
+                    $title = mysqli_real_escape_string($conn, $raw_title);
 
 
 
