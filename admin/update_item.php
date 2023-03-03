@@ -17,7 +17,7 @@
     
     <div class="main-content">
         <div class="wrapper">
-            <h1>Update Item</h1>
+            <h1>Update Product</h1>
             <br><br>
 
 
@@ -74,28 +74,28 @@
             <form action="" method="POST" class="form-center" enctype="multipart/form-data">
                 <table class="tbl-30">
                     <tr>
-                        <td>title</td>
+                        <td>Product title:</td>
                         <td>
                             <input type="text" name="title" placeholder="Item Title" value="<?php echo $title; ?>">
                         </td>
                     </tr>
 
                     <tr>
-                        <td>Description</td>
+                        <td>Description:</td>
                         <td>
                             <textarea name="description" cols="30" rows="5"><?php echo $description; ?></textarea>
                         </td>
                     </tr>
 
                     <tr>
-                        <td>Price</td>
+                        <td>Price:</td>
                         <td>
                             <input type="number" name="price" value="<?php echo $price; ?>">
                         </td>
                     </tr>
 
                     <tr>
-                        <td>Current Image</td>
+                        <td>Current Image:</td>
                         <td>
                             <?php
                                 //if there is any current image then show it
@@ -114,14 +114,14 @@
                     </tr>
 
                     <tr>
-                        <td>Change or add image</td>
+                        <td>Change or add image:</td>
                         <td>
                             <input type="file" name="image" value="<?php echo $image_name; ?>">
                         </td>
                     </tr>
 
                     <tr>
-                        <td>Category</td>
+                        <td>Category:</td>
                         <td>
                             <select name="category">
                                 <?php
@@ -158,7 +158,7 @@
                     </tr>
 
                     <tr>
-                        <td>Featured</td>
+                        <td>Featured:</td>
                         <td>
                             <input <?php if($featured == "yes"){ echo "checked"; } ?> type="radio" name="featured" value="yes">Yes
                             <input <?php if($featured == "no"){ echo "checked"; } ?> type="radio" name="featured" value="no">No
@@ -166,7 +166,7 @@
                     </tr>
 
                     <tr>
-                        <td>Active</td>
+                        <td>Active:</td>
                         <td>
                             <input <?php if($active == "yes"){ echo "checked"; } ?> type="radio" name="active" value="yes">Yes
                             <input <?php if($active == "no"){ echo "checked"; } ?> type="radio" name="active" value="no">No

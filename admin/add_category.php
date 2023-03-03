@@ -55,7 +55,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Active</td>
+                        <td>Active:</td>
                         <td>
                             <input type="radio" name="active" value=yes>Yes
                             <input type="radio" name="active" value=no>No

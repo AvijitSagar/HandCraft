@@ -108,7 +108,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Active</td>
+                        <td>Active:</td>
                         <td>
                             <!-- showing the yes or no button selected or not with "checked" -->
                             <input <?php if($active == "yes"){ echo "checked"; } ?> type="radio" name="active" value=yes>Yes

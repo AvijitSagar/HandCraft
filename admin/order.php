@@ -22,13 +22,13 @@
                 ?>
             </span>
             <br><br><br>
-            <table class="tbl-full">
+            <table class="tbl-full tbl-show">
                 <tr>
                     <th>Sl</th>
-                    <th>Item</th>
-                    <th>Product price</th>
+                    <th>Product</th>
+                    <th>Price</th>
                     <th>Quantity</th>
-                    <th>Total Price</th>
+                    <th>Total</th>
                     <th>Order Date</th>
                     <th>Status</th>
                     <th>Name</th>

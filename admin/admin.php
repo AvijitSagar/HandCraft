@@ -58,7 +58,7 @@
             <!-- button to add admin -->
             <!-- <a href="add_admin.php" class="btn-primary">Add Admin</a> -->
             <br><br><br>
-            <table class="tbl-full">
+            <table class="tbl-full tbl-show">
                 <tr>
                     <th>Sl.No</th>
                     <th>Full Name</th>

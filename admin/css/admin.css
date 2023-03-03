@@ -6,7 +6,7 @@
 }
 
 .scrollable {
-    width: 200px;
+    width: 150px;
     height: 70px;
     margin: 0;
     padding: 0;
@@ -51,7 +51,7 @@ a{
 .wrapper{
     /* border: 1px solid black; */
     padding: 1%;
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
@@ -59,6 +59,16 @@ a{
     float: none;
     clear: both;
 }
+
+/* ==============for table========== */
+.tbl-show {
+    border-collapse: collapse;
+    /* border: 1px solid black; */
+}
+.tbl-show tr {
+    border-bottom: 1px solid rgb(211, 209, 209);
+}
+
 
 .tbl-full{
     width: 100%;
@@ -76,7 +86,9 @@ table tr th{
 
 table tr td{
     padding: 1%;
+    white-space: nowrap;
 }
+/* ============================ */
 
 .form-center{
     /* align-items: center; */
@@ -140,17 +152,26 @@ table tr td{
 
 /* -------------menu----------- */
 .menu{
-    text-align: center;
-    /* background-color: #ffeaa7; */
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 999;
     border-bottom: 1px solid gray;
 }
 .menu ul{
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu ul li{
-    display: inline;
     padding: 1%;
+}
+
+.menu ul li:last-child {
+    margin-left: auto;
 }
 
 .menu ul li a{
@@ -161,6 +182,11 @@ table tr td{
 
 .menu ul li a:hover{
     color: #a29bfe;
+}
+
+.menu ul li.active a {
+    color: #a29bfe;
+    font-weight: bold;
 }
 /* -------------------------- */
 

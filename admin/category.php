@@ -49,7 +49,7 @@
                 ?>
             </span>
             <br><br><br>
-            <table class="tbl-full">
+            <table class="tbl-full tbl-show">
                 <tr>
                     <th>Sl.No</th>
                     <th>Title</th>

@@ -30,15 +30,15 @@
             <form action="" method="POST" class="form-center">
                 <table class="tbl-30">
                     <tr>
-                        <td>Full Name</td>
+                        <td>Full Name:</td>
                         <td><input type="text" name="full_name" id="" placeholder="Enter Your Full Name" required></td>
                     </tr>
                     <tr>
-                        <td>Username</td>
+                        <td>Username:</td>
                         <td><input type="text" name="username" placeholder="Username" id="" required></td>
                     </tr>
                     <tr>
-                        <td>Password</td>
+                        <td>Password:</td>
                         <td><input type="password" name="password" placeholder="Password" id="" required></td>
                     </tr>
                     <tr>

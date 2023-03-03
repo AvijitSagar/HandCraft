@@ -24,19 +24,19 @@
             <form action="" class="form-center" method="POST" >
                 <table class="tbl-30">
                     <tr>
-                        <td>Current Password</td>
+                        <td>Current Password:</td>
                         <td>
                             <input type="password" name="current_password" id="" placeholder="Enter your current password">
                         </td>
                     </tr>
                     <tr>
-                        <td>New Password</td>
+                        <td>New Password:</td>
                         <td>
                             <input type="password" name="new_password" id="" placeholder="Enter new password">
                         </td>
                     </tr>
                     <tr>
-                        <td>Confirm Password</td>
+                        <td>Confirm Password:</td>
                         <td>
                             <input type="password" name="confirm_password" id="" placeholder="Confirm new password">
                         </td>

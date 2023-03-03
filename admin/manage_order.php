@@ -69,24 +69,24 @@
             <form action="" method="POST" class="form-center">
                 <table class="tbl-30">
                     <tr>
-                        <td>Product Name</td>
+                        <td>Product Name:</td>
                         <td><?php echo $item; ?></td>
                     </tr>
 
                     <tr>
-                        <td>Product Price</td>
+                        <td>Product Price:</td>
                         <td><?php echo $price; ?></td>
                     </tr>
 
                     <tr>
-                        <td>Quantity</td>
+                        <td>Quantity:</td>
                         <td>
                             <input type="number" name="quantity" value="<?php echo $quantity; ?>">
                         </td>
                     </tr>
 
                     <tr>
-                        <td>Status</td>
+                        <td>Status:</td>
                         <td>
                             <select name="status" id="">
                                 <option <?php if($status == "ordered"){ echo "selected"; } ?> value="ordered">Ordered</option>
@@ -98,7 +98,7 @@
                     </tr>
 
                     <tr>
-                        <td>Customer Name</td>
+                        <td>Customer Name:</td>
                         <td>
                             <!-- <input type="text" name="customer_name" value=""> -->
                             <?php echo $customer_name; ?>
@@ -106,7 +106,7 @@
                     </tr>
 
                     <tr>
-                        <td>Customer Contact</td>
+                        <td>Customer Contact:</td>
                         <td>
                             <!-- <input type="text" name="customer_contact" value=""> -->
                             <?php echo $customer_contact; ?>
@@ -114,7 +114,7 @@
                     </tr>
 
                     <tr>
-                        <td>Customer Email</td>
+                        <td>Customer Email:</td>
                         <td>
                             <!-- <input type="text" name="customer_email" value=""> -->
                             <?php echo $customer_email; ?>
@@ -122,7 +122,7 @@
                     </tr>
 
                     <tr>
-                        <td>Customer Address</td>
+                        <td>Customer Address:</td>
                         <td>
                             <textarea name="customer_address" cols="30" rows="10"><?php echo $customer_address; ?></textarea>
                         </td>

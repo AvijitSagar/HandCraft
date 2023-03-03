@@ -54,7 +54,7 @@
             <!-- button to add admin -->
             <a href="<?php echo HOME_URL; ?>admin/add_item.php" class="btn-primary">Add Item</a>
             <br><br><br>
-            <table class="tbl-full">
+            <table class="tbl-full tbl-show">
                 <tr>
                     <th>Sl.No</th>
                     <th>Title</th>
@@ -117,7 +117,7 @@
                                             else{
                                                 //we have image to display
                                                 ?>
-                                                    <img src="<?php echo HOME_URL; ?>img/item/<?php echo $image_name; ?>" width="100px" height="50px">
+                                                    <img src="<?php echo HOME_URL; ?>img/item/<?php echo $image_name; ?>" width="60px" height="40px">
                                                 <?php
                                             }
                                         ?>

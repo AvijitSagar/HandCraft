@@ -20,7 +20,7 @@
 
     <div class="main-content">
         <div class="wrapper">
-            <h1>Add Items</h1>
+            <h1>Add Product</h1>
             <br><br>
 
 
@@ -40,28 +40,28 @@
             <form action="" method="POST" enctype="multipart/form-data" class="form-center">
                 <table class="tbl-30">
                     <tr>
-                        <td>Title</td>
+                        <td>Product title:</td>
                         <td>
                             <input type="text" name="title" placeholder="Title of the item">
                         </td>
                     </tr>
 
                     <tr>
-                        <td>Description</td>
+                        <td>Description:</td>
                         <td>
                             <textarea name="description" cols="30" rows="5" placeholder="Description of the item"></textarea>
                         </td>
                     </tr>
 
                     <tr>
-                        <td>Price</td>
+                        <td>Price:</td>
                         <td>
                             <input type="number" name="price" value= 10 min="10" max="1000000">
                         </td>
                     </tr>
 
                     <tr>
-                        <td>Selece image</td>
+                        <td>Selece image:</td>
                         <td>
                             <input type="file" name="image">
                         </td>
@@ -69,7 +69,7 @@
 
                     <!-- we have to show all category from the database -->
                     <tr>
-                        <td>Category</td>
+                        <td>Category:</td>
                         <td>
                             <select name="category">
 
@@ -109,7 +109,7 @@
                     </tr>
 
                     <tr>
-                        <td>Featured</td>
+                        <td>Featured:</td>
                         <td>
                             <input type="radio" name="featured" value="yes">Yes
                             <input type="radio" name="featured" value="no">No
@@ -117,7 +117,7 @@
                     </tr>
 
                     <tr>
-                        <td>Active</td>
+                        <td>Active:</td>
                         <td>
                             <input type="radio" name="active" value="yes">Yes
                             <input type="radio" name="active" value="no"> No
