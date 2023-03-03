@@ -34,30 +34,35 @@
                     $id = $_GET['id'];
                     $sql = "SELECT * FROM tbl_order WHERE id = $id";
                     $res = mysqli_query($conn, $sql);
-                    $count = mysqli_num_rows($res);
-                    if($count == 1){
-                        //have data in db
-                        $rows = mysqli_fetch_assoc($res);
+                    if($res == true){
+                        $count = mysqli_num_rows($res);
 
-                        $item = $rows['item'];
-                        $price = $rows['price'];
-                        $quantity = $rows['quantity'];
-                        $total = $rows['total'];
-                        $order_date = $rows['order_date'];
-                        $status = $rows['status'];
-                        $customer_name = $rows['customer_name'];
-                        $customer_contact = $rows['customer_contact'];
-                        $customer_email = $rows['customer_email'];
-                        $customer_address = $rows['customer_address'];
+                        if($count == 1){
+                            //have data in db
+                            $rows = mysqli_fetch_assoc($res);
+
+                            $item = $rows['item'];
+                            $price = $rows['price'];
+                            $quantity = $rows['quantity'];
+                            $total = $rows['total'];
+                            $order_date = $rows['order_date'];
+                            $status = $rows['status'];
+                            $customer_name = $rows['customer_name'];
+                            $customer_contact = $rows['customer_contact'];
+                            $customer_email = $rows['customer_email'];
+                            $customer_address = $rows['customer_address'];
+                        }
+                        else{
+                            //product not found
+                            $_SESSION['order_not_found'] = "<div class='error'>Order not found</div>";
+                            header("location: " . HOME_URL . "admin/order.php");
+                        }
                     }
-                    else{
-                        //no data in db
-                        header("location: " . HOME_URL . "admin/manage_order.php");
-                    }
+                    
                 }
                 else{
                     //not getting id
-                    header("location: " . HOME_URL . "admin/manage_order.php");
+                    header("location: " . HOME_URL . "admin/order.php");
                 }
             ?>
 

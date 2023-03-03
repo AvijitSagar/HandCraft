@@ -154,7 +154,7 @@ table tr td{
 .menu{
     position: sticky;
     top: 0;
-    background-color: #ffffff;
+    background-color: #808e9b;
     z-index: 999;
     border-bottom: 1px solid gray;
 }
@@ -176,16 +176,16 @@ table tr td{
 
 .menu ul li a{
     font-weight: bold;
-    color: #ff7675;
+    color: #f5f6fa;
 
 }
 
 .menu ul li a:hover{
-    color: #a29bfe;
+    color: #d3d6d8;
 }
 
 .menu ul li.active a {
-    color: #a29bfe;
+    color: #5e5e5e;
     font-weight: bold;
 }
 /* -------------------------- */

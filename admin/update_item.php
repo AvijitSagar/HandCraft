@@ -54,7 +54,7 @@
                         else{
                             //no data available
                             //session message
-                            $_SESSION['item_not_found'] = "<div class='error'>Item not found</div>";
+                            $_SESSION['item_not_found'] = "<div class='error'>Product not found</div>";
                             //redirect to item page
                             header("location: " . HOME_URL . "admin/item.php");
                         }

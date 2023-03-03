@@ -1,3 +1,8 @@
+<!-- this line of code is for a error....  -->
+<!-- output buffering to solve it -->
+<!-- got it from stackoverflow -->
+<?php ob_start(); ?>  
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

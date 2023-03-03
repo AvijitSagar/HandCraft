@@ -19,6 +19,10 @@
                         echo $_SESSION['update_order'];
                         unset($_SESSION['update_order']);
                     }
+                    if(isset($_SESSION['order_not_found'])){
+                        echo $_SESSION['order_not_found'];
+                        unset($_SESSION['order_not_found']);
+                    }
                 ?>
             </span>
             <br><br><br>
