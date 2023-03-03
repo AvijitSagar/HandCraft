@@ -49,6 +49,7 @@
                     </form>
             </fieldset>
         </div>
+        <span>@all right reserved by <a href="https://saggarr.com/">Avijit Biswas (sagar)</a>  2023</span>
     </div>
     <!-- -------------footer include--------- -->
 

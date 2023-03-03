@@ -102,6 +102,7 @@
                     <label for="validationCustom01" class="form-label">Name</label>
                     <input type="text" name="name" class="form-control" id="validationCustom01" required>
                   </div>
+                  <br>
                   <div class="col-md-12">
                     <label for="validationCustomUsername" class="form-label">Mobile</label>
                     <div class="input-group has-validation">
@@ -109,14 +110,14 @@
                       <input type="tel" name="contact" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                     </div>
                   </div>
-
+                  <br>
                   <div class="col-md-12">
                     <label for="validationCustomUsername" class="form-label">Email</label>
                     <div class="input-group has-validation">
                       <input type="email" name="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                     </div>
                   </div>
-
+                  <br>
                   <div class="col-md-12">
                     <label for="validationCustomUsername" class="form-label">Detail address</label>
                     <div class="input-group has-validation">

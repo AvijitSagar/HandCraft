@@ -124,7 +124,19 @@
                                     </td>
                                     <td><?php echo $category; ?></td>
                                     <td><?php echo $featured; ?></td>
-                                    <td><?php echo $active; ?></td>
+                                    <td>
+                                        <?php
+                                            //for showing color 
+                                            //if active status is yes then green
+                                            //if active status is no then red
+                                            if($active == 'yes'){
+                                                echo "<label style='color: blue;'>$active</label>";
+                                            }
+                                            elseif($active == 'no'){
+                                                echo "<label style='color: red;'>$active</label>";
+                                            }
+                                        ?>
+                                    </td>
                                     <td>
                                         <!-- passing the id which should be updated -->
                                         <a href="<?php echo HOME_URL; ?>admin/update_item.php?id=<?php echo $id; ?>" class="btn-secondary">Update</a>
