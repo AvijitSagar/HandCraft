@@ -12,7 +12,7 @@
     <div class="main-content">
         <div class="wrapper">
             <h1>Manage Items</h1>
-            <br><br>
+            <br>
 
             <span class="form-center">
                 <?php

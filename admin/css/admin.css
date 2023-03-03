@@ -185,7 +185,7 @@ table tr td{
 }
 
 .menu ul li.active a {
-    color: #5e5e5e;
+    color: #1a1a1a;
     font-weight: bold;
 }
 /* -------------------------- */
@@ -223,6 +223,7 @@ table tr td{
     padding: 3% 0;
     background-color: #dfe6e9;
     align-items: center;
+    min-height: calc(100vh - 100px); /* 100px is the height of the footer */
 }
 
 .col-4{

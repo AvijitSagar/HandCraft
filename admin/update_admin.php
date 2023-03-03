@@ -40,6 +40,7 @@
                     }
                     else{
                         //redirect page to admin
+                        $_SESSION['admin_not_found'] = "<div class='error'>Admin not found</div>";
                         header("location: " . HOME_URL . "admin/admin.php");
                     }
                 }

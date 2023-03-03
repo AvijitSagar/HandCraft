@@ -15,7 +15,7 @@
 <body>
     <!-- ============================NAVBAR START======================== -->
     <div id="navbar" class="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
               <div class="logo">
                 <a href="<?php echo HOME_URL; ?>"><img class="img-responsive" src="img/logo.png" alt=""></a>
@@ -29,9 +29,9 @@
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="<?php echo HOME_URL; ?>">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                       <a class="nav-link" href="#">Link</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Category
@@ -74,7 +74,7 @@
                       </ul>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link disabled">Disabled</a>
+                      <a class="nav-link active" aria-current="page" href="">About Us</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search" action="<?php echo HOME_URL; ?>search.php" method="POST">

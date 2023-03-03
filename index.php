@@ -74,7 +74,7 @@
                               <div class="card-body">
                                 <h5 class="card-title"><?php echo $item_title; ?></h5>
                                 <p class="card-text">price: <span><?php echo $item_price; ?></span> tk</p>
-                                <a href="<?php echo HOME_URL; ?>item_details.php?id=<?php echo $item_id; ?>" class="btn btn-primary">BUY</a>
+                                <a href="<?php echo HOME_URL; ?>item_details.php?id=<?php echo $item_id; ?>" class="btn btn-primary">View</a>
                               </div>
                           </div>
                       </div>

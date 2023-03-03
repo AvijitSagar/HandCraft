@@ -67,10 +67,6 @@
             ?>
 
 
-
-
-
-
             <form action="" method="POST" class="form-center">
                 <table class="tbl-30">
                     <tr>

@@ -50,6 +50,11 @@
                         echo $_SESSION['password_changed'];
                         unset($_SESSION['password_changed']);
                     }
+                    if(isset($_SESSION['admin_not_found'])){
+                        echo $_SESSION['admin_not_found'];
+                        unset($_SESSION['admin_not_found']);
+                    }
+
                 ?>
             </span>
             
