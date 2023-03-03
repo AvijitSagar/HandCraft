@@ -93,7 +93,7 @@
                                     </td>
                                     
                                     <td><?php echo $customer_name; ?></td>
-                                    <td><?php echo $customer_contact; ?></td>
+                                    <td style=" color:blue;"><?php echo $customer_contact; ?></td>
                                     <td><?php echo $cuatomer_email; ?></td>
                                     <td>
                                         <div class="scrollable">
