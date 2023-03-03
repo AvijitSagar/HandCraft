@@ -37,6 +37,12 @@ fieldset{
   color: blue;
 }
 
+.message-button{
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+}
+
 .error{
   color: red;
 }

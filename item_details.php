@@ -98,7 +98,7 @@
         }
         else{
           //item not available
-          echo "<div class='error'>Item is not available</div>";
+          echo "<div class='error form-center'>Product is not available</div>";
         }
       }
 

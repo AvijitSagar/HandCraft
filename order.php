@@ -1,3 +1,9 @@
+<!-- this line of code is for header location already sent error....  -->
+<!-- output buffering to solve it -->
+<!-- got it from stackoverflow -->
+<?php ob_start(); ?>  
+
+
 <?php include('partials_front/menu.php'); ?>
 
 
@@ -5,6 +11,7 @@
 
 
   <!-- =====================================order start========================= -->
+  <form action="" method="POST">
   <div class="container">
     <div class="form">
       <div class="text-center">
@@ -24,7 +31,7 @@
               //count rows
               $count = mysqli_num_rows($res);
               //check
-              if($count > 0){
+              if($count == 1){
                 //we have data in db
                 //row wise data retrieve
                 while($rows = mysqli_fetch_assoc($res)){
@@ -55,9 +62,12 @@
                         
                         <div class="card-body">
                           <h5 class="card-title"><?php echo $item_title; ?></h5>
-                          <p class="card-text"><?php echo $item_description; ?></p>
-                          <p class="card-text">price: <span><?php echo $item_price; ?></span> tk</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          <p class="card-text">Quantity</p>
+                          <input type="hidden" name="item" value="<?php echo $item_title; ?>">
+                          <input type="hidden" name="price" value="<?php echo $item_price ?>">
+                          
+                          <p class="card-text">Price: <span><?php echo $item_price; ?></span> tk</p>
+                          <p class="card-text">Quantity <input type="number" name="quantity" value= 1 min="1" max="5"></p>
                         </div>
                       </div>
                     </div>
@@ -86,102 +96,100 @@
           }
         ?>
 
-
-
-
-
-
-
-          <!-- <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
-            <div class="card mb-3">
-              <img src="img/carft_3.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-          </div> -->
-
           <div class="col-sm-5 col-md-6">
-              <form class="row g-3 needs-validation" novalidate>
+              <form class="row g-3 needs-validation" method="POST" novalidate>
                   <div class="col-md-12">
-                    <label for="validationCustom01" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
+                    <label for="validationCustom01" class="form-label">Name</label>
+                    <input type="text" name="name" class="form-control" id="validationCustom01" required>
                   </div>
                   <div class="col-md-12">
-                    <label for="validationCustom02" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <label for="validationCustomUsername" class="form-label">Username</label>
+                    <label for="validationCustomUsername" class="form-label">Mobile</label>
                     <div class="input-group has-validation">
-                      <span class="input-group-text" id="inputGroupPrepend">@</span>
-                      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                      <div class="invalid-feedback">
-                        Please choose a username.
-                      </div>
+                      <span class="input-group-text" id="inputGroupPrepend">+88</span>
+                      <input type="tel" name="contact" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                     </div>
                   </div>
-                  <div class="col-md-12">
-                    <label for="validationCustom03" class="form-label">City</label>
-                    <input type="text" class="form-control" id="validationCustom03" required>
-                    <div class="invalid-feedback">
-                      Please provide a valid city.
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="validationCustom04" class="form-label">State</label>
-                    <select class="form-select" id="validationCustom04" required>
-                      <option selected disabled value="">Choose...</option>
-                      <option>dhaka</option>
-                      <option>khulna</option>
-                      <option>barishal</option>
-                      <option>sylhet</option>
-                      <option>chittagong</option>
-                      <option>rajshahi</option>
-                      <option>rangpur</option>
-                      <option>comilla</option>
 
-                      
-                    </select>
-                    <div class="invalid-feedback">
-                      Please select a valid state.
+                  <div class="col-md-12">
+                    <label for="validationCustomUsername" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                      <input type="email" name="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <label for="validationCustom05" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="validationCustom05" required>
-                    <div class="invalid-feedback">
-                      Please provide a valid zip.
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                      <label class="form-check-label" for="invalidCheck">
-                        Agree to terms and conditions
-                      </label>
-                      <div class="invalid-feedback">
-                        You must agree before submitting.
+
+                  <div class="col-md-12">
+                    <label for="validationCustomUsername" class="form-label">Detail address</label>
+                    <div class="input-group has-validation">
+                      <div class="input-group">
+                        <textarea class="form-control" name="address" aria-label="With textarea" required></textarea>
                       </div>
                     </div>
                   </div>
+
+                  <br>
                   <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Confirm Order</button>
+                    <button class="btn btn-primary" type="submit" name="submit">Confirm Order</button>
                   </div>
               </form>
+
+
+            <?php
+              //check whether the submit button is clicked or not
+              if(isset($_POST['submit'])){
+                //get all the details from the form
+                // $item = $_POST['item'];
+                // $price = $_POST['price'];
+                $quantity = $_POST['quantity'];
+                $total = $item_price * $quantity; //total = price x quantity
+                $order_date = date("Y-m-d h:i:sa"); //order date
+                $status = 'ordered'; //ordered, ondelevary, delivered, canceled..... user sudhu order korte parbe baki gula admin handle korbe admin panel theke
+                $customer_name = $_POST['name'];
+                $customer_contact = $_POST['contact'];
+                $customer_email = $_POST['email'];
+                $customer_address = $_POST['address'];
+
+                //save tehe order in db
+                //sql
+                $sql_2 = "INSERT INTO tbl_order SET
+                  item = '$item_title',
+                  price = $item_price,
+                  quantity = $quantity,
+                  total = $total,
+                  order_date = '$order_date',
+                  status = '$status',
+                  customer_name = '$customer_name',
+                  customer_contact = '$customer_contact',
+                  customer_email = '$customer_email',
+                  customer_address = '$customer_address'
+                ";
+
+                //execute
+                $res_2 =mysqli_query($conn, $sql_2);
+                //check
+                if($res_2 == true){
+                  //query executed and order saved
+                  $_SESSION['order'] = "<div class='success'>Congrats, Your order placed successfully</div>";
+                  //redirect
+                  header("location: " . HOME_URL . "message.php");
+                }
+                else{
+                  //failed to save order
+                  $_SESSION['order'] = "<div class='error'>Sorry, Failed to place your order</div>";
+                  //redirect
+                  header("location: " . HOME_URL);
+                }
+              }
+
+            ?>
+
+
             </div>
       </div>
   </div>
-  </div>
-  </div>
+  </form>
+
+  
+
   <!-- =====================================order end========================= -->
 
 

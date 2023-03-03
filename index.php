@@ -1,5 +1,15 @@
 <?php include('partials_front/menu.php'); ?>
 
+<span class="form-center">
+  <?php
+    if(isset($_SESSION['order'])){
+      echo $_SESSION['order'];
+      unset($_SESSION['order']);
+    }
+  ?>
+  
+</span>
+
 
 
 
@@ -19,8 +29,6 @@
         <h1>Our Products</h1>
         <div class="container text-center">
             <div class="row align-items-center">
-
-
 
               <?php
 

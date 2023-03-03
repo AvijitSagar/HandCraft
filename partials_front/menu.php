@@ -56,7 +56,7 @@
                               ?>
 
                                   <li>
-                                    <a class="dropdown-item" href="<?php echo HOME_URL; ?>category.php"><?php echo $title; ?></a>
+                                    <a class="dropdown-item" href="<?php echo HOME_URL; ?>category.php?id=<?php echo $id; ?>"><?php echo $title; ?></a>
                                   </li>
                                 
                               <?php
